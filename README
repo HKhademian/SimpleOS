@@ -1,0 +1,10 @@
+follow tuts from https://www.youtube.com/watch?v=FkrpUaGThTQ to build a simple OS that can start at qemu
+
+to build docker image use:
+```docker build . -t my-build-env```
+
+then to use this build environment to make project:
+``` docker run --rm -it -v $PWD:/root/env elf-buildenv ```
+
+then to start VM use:
+``` qemu-system-x86_64 -cdrom dist/x86/kernel.iso ```
